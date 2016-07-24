@@ -23,7 +23,7 @@ http://www.davidrevoy.com/article240/gmic-line-art-colorization
 
 Notes
 -----
-You need to be running Nautilus 1.0.3+ or above to use scripts menu and have gdialog installed in your system.
+You need to be running Nautilus 1.0.3+ or above to use scripts menu and have Zenity + G'mic 1.6.0.1 or above installed in your system.
 
 If the menu scripts not appear, close the nautilus and reopen it. If it's not working yet, just open the terminal and try this: $ nautilus -q or killall nautilus
 
