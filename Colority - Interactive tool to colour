@@ -34,7 +34,8 @@ if [ $? = 0 ]; then
 - Key '<b>BACKSPACE</b>' deletes the last control point added.
 - Key '<b>PAGE UP</b>' increases image contrast.
 - Key '<b>PAGE DOWN</b>' decreases image contrast.
-- Keys '<b>CTRL+D</b>' increase window size.
+- Key '<b>PAGE DOWN</b>' decreases image contrast.
+- Key '<b>R</b>' toggles color replace mode.
 - Keys '<b>CTRL+C</b>' decrease window size.
 - Keys '<b>CTRL+R</b>' reset window size.
 - Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window." &
@@ -56,6 +57,7 @@ zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text
 - Key '<b>BACKSPACE</b>' deletes the last control point added.
 - Key '<b>PAGE UP</b>' increases image contrast.
 - Key '<b>PAGE DOWN</b>' decreases image contrast.
+- Key '<b>R</b>' toggles color replace mode.
 - Keys '<b>CTRL+D</b>' increase window size.
 - Keys '<b>CTRL+C</b>' decrease window size.
 - Keys '<b>CTRL+R</b>' reset window size.
