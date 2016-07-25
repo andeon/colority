@@ -15,6 +15,12 @@ Installation
 1. Copy the file into the ~/.local/share/nautilus/scripts hidden folder (the folder inside your home directory).
 2. Set permissions of file to "Allow executing file as program". Right-click on the file and select Properties. Under the Permissions tab, tick the checkbox near the bottom labeled Allow executing file as program. Then Close the Properties Window.
 
+
+Run the Colority
+------------
+Open the Nautilus and Right-Click on the file image select **Scripts > Colority - Interactive Tool to Colour**. 
+
+
 Links
 -----
 
