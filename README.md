@@ -18,7 +18,7 @@ Installation
 Links
 -----
 
-
+G'mic - http://gmic.eu/
 http://www.davidrevoy.com/article240/gmic-line-art-colorization
 
 Notes
