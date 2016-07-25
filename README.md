@@ -2,7 +2,7 @@ Colority - Interactive Tool to Colour
 =================================
 
 
-Colority create a colored image with G'mic Filter colorize (-x_colorize).
+Colority create a colored image with G'mic filter colorize (-x_colorize).
 
 Author & License
 -----------------
