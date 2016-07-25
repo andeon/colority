@@ -18,7 +18,7 @@ Installation
 
 Run the Colority
 ------------
-Open the Nautilus and Right-Click on the file image select **Scripts > Colority - Interactive Tool to Colour**. 
+Open the Nautilus and Right-Click on the image file select **Scripts > Colority - Interactive Tool to Colour**. 
 
 
 Links
