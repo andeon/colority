@@ -20,7 +20,7 @@ zenity --question  --title="Import additional Palette" --window-icon=$zSelected_
 if [ $? = 0 ]; then
 	zPalette=$(zenity --file-selection --window-icon=$zSelected_file --title="Select the palette" --file-filter='Palette (gpl) | *.gpl')
 	[ $? -ne 0 ] && exit 1
-	zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text "Enter the file name for your image color:" --entry-text "color") 
+	zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text "Enter the file name for your new image color:" --entry-text "color") 
 
 	[ $? -ne 0 ] && exit 1
 
@@ -42,9 +42,9 @@ if [ $? = 0 ]; then
 - Keys '<b>CTRL+R</b>' reset window size.
 - Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window." &
 
-	gmic "$zSelected_file" -input_gpl "$zPalette" -x_colorize[0] 1,0,1,[-1] -k[0] -s c,{3-s} -o[1] $zName.png
+	gmic "$zSelected_file" -input_gpl "$zPalette" -x_colorize[0] 1,0,1,[-1] -k[0] -s c,{3-s} -o[1] $zName[c].png
 else
-zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text "Enter the file name for your image color:" --entry-text "color") 
+zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text "Enter the file name for your new image color:" --entry-text "color") 
 [ $? -ne 0 ] && exit 1
 
 	zenity --no-wrap --info --window-icon=$zSelected_file --title="Actions and Shortcuts to interactive window" --text="<b>The action list to be used in interactive image window to manage your colorization:</b> 
@@ -64,6 +64,6 @@ zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text
 - Keys '<b>CTRL+C</b>' decrease window size.
 - Keys '<b>CTRL+R</b>' reset window size.
 - Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window." &
-	gmic "$zSelected_file" -x_colorize 1,0,1, -k[0] -s c,{3-s} -o[1] $zName.png 
+	gmic "$zSelected_file" -x_colorize 1,0,1, -k[0] -s c,{3-s} -o[1] $zName[c].png 
 fi
 fi
