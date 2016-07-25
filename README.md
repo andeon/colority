@@ -19,6 +19,7 @@ Links
 -----
 
 G'mic - http://gmic.eu/
+
 David Revoy's Blog - http://www.davidrevoy.com/article240/gmic-line-art-colorization
 
 Notes
