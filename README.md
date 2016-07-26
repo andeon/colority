@@ -25,15 +25,15 @@ Open the Nautilus and Right-Click on the image file select **Scripts > Colority 
 Links
 -----
 
-G'mic - http://gmic.eu/
+G'MIC - http://gmic.eu/
 
 David Revoy's Blog - http://www.davidrevoy.com/article240/gmic-line-art-colorization
 
-Andeon's Blog - http://andeons.com/colority-ferramenta-para-colorir/ (PT-BR)
+Andeon's Blog - http://andeons.com/colority-ferramenta-para-colorir/ (pt_BR)
 
 Notes
 -----
-You need to be running Nautilus 1.0.3+ or above to use scripts menu and have Zenity + G'mic 1.6.0.1 or above installed in your system.
+You need to be running Nautilus 1.0.3+ or above to use scripts menu and have Zenity + G'MIC 1.6.0.1 or above installed in your system.
 
 If the menu scripts not appear, close the nautilus and reopen it. If it's not working yet, just open the terminal and try this: $ nautilus -q or killall nautilus
 
