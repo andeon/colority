@@ -22,6 +22,19 @@ Open the Nautilus and Right-Click on the image file select **Scripts > Colority 
 
 ![Alt text](http://i.imgur.com/x8YRaMB.gif "Screenshot of Colority")
 
+
+
+Ubuntu and derivatives
+-----
+The easy way to get G'MIC in LTS version is use the Thorsten Stettin's PPA ([otto-kesselgulasch] (https://launchpad.net/~otto-kesselgulasch))
+
+`sudo add-apt-repository ppa:otto-kesselgulasch/gimp`
+
+`sudo apt-get update`
+
+`sudo apt-get install gmic`
+
+
 Links
 -----
 
