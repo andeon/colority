@@ -31,6 +31,8 @@ David Revoy's Blog - http://www.davidrevoy.com/article240/gmic-line-art-coloriza
 
 Andeon's Blog - http://andeons.com/colority-ferramenta-para-colorir/ (pt_BR)
 
+Mozart Couto's Blog - http://blogdodesenhador.blogspot.com.br/2016/07/colority-aplicando-cores-partir-do.html (pt_BR)
+
 Notes
 -----
 You need to be running Nautilus 1.0.3+ or above to use scripts menu and have Zenity + G'MIC 1.6.0.1 or above installed in your system.
