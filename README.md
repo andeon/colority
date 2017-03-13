@@ -42,7 +42,7 @@ G'MIC - http://gmic.eu/
 
 David Revoy's Blog - http://www.davidrevoy.com/article240/gmic-line-art-colorization
 
-Andeon's Blog - http://andeons.com/colority-ferramenta-para-colorir/ (pt_BR)
+Andeon's Blog - http://andeons.com/2016/07/colority-ferramenta-para-colorir.html (pt_BR)
 
 Mozart Couto's Blog - http://blogdodesenhador.blogspot.com.br/2016/07/colority-aplicando-cores-partir-do.html (pt_BR)
 
