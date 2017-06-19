@@ -7,6 +7,6 @@ Encoding=UTF-8
 MimeType=image/*
 
 [Desktop Action colour]
-Name=colority
+Name=Colority - Interactive Tool to Colour
 Icon=gpick
 Exec=~/.local/share/kservices5/ServiceMenus/colority.sh %f
