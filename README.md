@@ -18,6 +18,7 @@ Installation
 ### Dolphin
 1. Copy the files inside Dolphin folder into the ~/.local/share/kservices5/ServiceMenus hidden folder (the folder inside your home directory).
 2. Set permissions of file .sh to "Is executable". Right-click on the file and select Properties. Under the Permissions tab, tick the checkbox near the bottom labeled "Is executable". Then Close the Properties Window.
+
 Run the Colority
 ------------
 Open the Nautilus and Right-Click on the image file select **Scripts > Colority - Interactive Tool to Colour**. 
