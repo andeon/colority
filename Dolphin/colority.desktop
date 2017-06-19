@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+Icon=gpick
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+Actions=colour;
+Encoding=UTF-8
+MimeType=image/*
+
+[Desktop Action colour]
+Name=colority
+Icon=gpick
+Exec=~/.local/share/kservices5/ServiceMenus/colority.sh %f
