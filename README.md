@@ -13,7 +13,7 @@ Licensed under the GNU GENERAL PUBLIC LICENSE, Version 2
 Installation
 ------------
 #### Nautilus
-1. Copy the file into the ~/.local/share/nautilus/scripts hidden folder (the folder inside your home directory).
+1. Copy the file "Colority - Interactive tool to colour" into the ~/.local/share/nautilus/scripts hidden folder (the folder inside your home directory).
 2. Set permissions of file to "Allow executing file as program". Right-click on the file and select Properties. Under the Permissions tab, tick the checkbox near the bottom labeled Allow executing file as program. Then Close the Properties Window.
 #### Dolphin
 1. Copy the files inside Dolphin folder into the ~/.local/share/kservices5/ServiceMenus hidden folder (the folder inside your home directory).
