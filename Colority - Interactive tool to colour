@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ####### Colority tool to colour
-####### Version 0.1
+####### Version 0.2
 ####### Created by Anderson Prado (AndeOn), andeons.com
 ####### Licensed under the GNU GENERAL PUBLIC LICENSE, Version 2
 ### Depends on G'mic 1.6.0.1 or above, Zenity
@@ -9,23 +9,17 @@
 ### Set Permissions of script to "Allow executing file as program"
 ### You need to be running Nautilus 1.0.3+ or above to use scripts menu.
 
+zSelected_file="$1" 
+zName=$(basename ${zSelected_file%.*})
 
-zenity --question  --title="Colority - Interactive Tool to Colour" --text "<i>Just a GTK dialog script to use Gmic filter 'colorize'.</i> \n\n<b>You want to colour an image?</b>"
-if [ $? = 0 ]; then
- zSelected_file=""$PWD""/$1"" 
+zChoices=$(zenity --width=400 --height=300 --window-icon=$zSelected_file --list  --title="Colority - Interactive Tool to Colour" --text="<i>Just a  simple GUI dialog script to use the Gmic filter <b>Colorize</b> [Interactive]</i> \n\n  Choose an option bellow to colour an image:\n " --column= "1. Default" "2. Use a custom palette (.gpl file)" );
 
-zenity --question  --title="Import additional Palette" --window-icon=$zSelected_file --text "<b>You want use an additional Palette?</b>
-
-* <i>if choose 'no' will use default palette.</i>"
-if [ $? = 0 ]; then
-	zPalette=$(zenity --file-selection --window-icon=$zSelected_file --title="Select the palette" --file-filter='Palette (gpl) | *.gpl')
-	[ $? -ne 0 ] && exit 1
-	zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text "Enter the file name for your new image color:" --entry-text "color") 
-
-	[ $? -ne 0 ] && exit 1
-
-	zenity --no-wrap --info --window-icon=$zSelected_file --title="Actions and Shortcuts to interactive window" --text="<b>The action list to be used in interactive image window to manage your colorization:</b> 
-
+	case "$?" in 
+		0)
+		case "$zChoices" in
+				"1. Default")
+	zenity --no-wrap --info --window-icon=$zSelected_file --title="Actions and Shortcuts to interactive window" --text="<b>The action list to be used in interactive image window to manage your colorization:</b>
+ 
 - <b>Left mouse button</b> creates a new colored control point (or moves an existing one).
 - <b>Right mouse button</b> over a control point deletes it.
 - <b>Right mouse button</b> anywhere else picks a color from the image.
@@ -40,15 +34,15 @@ if [ $? = 0 ]; then
 - Key '<b>R</b>' toggles color replace mode.
 - Keys '<b>CTRL+C</b>' decrease window size.
 - Keys '<b>CTRL+R</b>' reset window size.
-- Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window." &
+- Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window."  & 
+			gmic "$zSelected_file" -x_colorize 1,0,1, -k[0] -s c,{3-s} -o[1] $zName[c].png ;
+;;
+				"2. Use a custom palette (.gpl file)") 
 
-	gmic "$zSelected_file" -input_gpl "$zPalette" -x_colorize[0] 1,0,1,[-1] -k[0] -s c,{3-s} -o[1] $zName[c].png
-else
-zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text "Enter the file name for your new image color:" --entry-text "color") 
-[ $? -ne 0 ] && exit 1
+			zPalette=$(zenity --file-selection --window-icon=$zSelected_file --title="Select the palette" --file-filter='Palette (gpl) | *.gpl') ; [ $? = 1 ] && exit 0;
 
-	zenity --no-wrap --info --window-icon=$zSelected_file --title="Actions and Shortcuts to interactive window" --text="<b>The action list to be used in interactive image window to manage your colorization:</b> 
-
+	zenity --no-wrap --info --window-icon=$zSelected_file --title="Actions and Shortcuts to interactive window" --text="<b>The action list to be used in interactive image window to manage your colorization:</b>
+ 
 - <b>Left mouse button</b> creates a new colored control point (or moves an existing one).
 - <b>Right mouse button</b> over a control point deletes it.
 - <b>Right mouse button</b> anywhere else picks a color from the image.
@@ -59,11 +53,13 @@ zName=$(zenity --entry --window-icon=$zSelected_file --title="Save Image" --text
 - Key '<b>BACKSPACE</b>' deletes the last control point added.
 - Key '<b>PAGE UP</b>' increases image contrast.
 - Key '<b>PAGE DOWN</b>' decreases image contrast.
+- Key '<b>PAGE DOWN</b>' decreases image contrast.
 - Key '<b>R</b>' toggles color replace mode.
-- Keys '<b>CTRL+D</b>' increase window size.
 - Keys '<b>CTRL+C</b>' decrease window size.
 - Keys '<b>CTRL+R</b>' reset window size.
-- Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window." &
-	gmic "$zSelected_file" -x_colorize 1,0,1, -k[0] -s c,{3-s} -o[1] $zName[c].png 
-fi
-fi
+- Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window."  & 
+
+	gmic "$zSelected_file" -input_gpl "$zPalette" -x_colorize[0] 1,0,1,[-1] -k[0] -s c,{3-s} -o[1] $zName[c].png 
+ ;;
+            esac;
+esac;
