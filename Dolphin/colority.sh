@@ -29,7 +29,7 @@ kShortcuts="<b>The action list to be used in interactive image window to manage 
 <br> - Keys '<b>CTRL+R</b>' reset window size.
 <br> - Keys '<b>ESC</b>', '<b>Q</b>' or '<b>ENTER</b>' exit the interactive window."	 
 
-kChoices=$(kdialog --title="Colority - Interactive Tool to Colour" --radiolist "<i>Just a  simple GUI dialog script to use the Gmic filter <b>Colorize</b> [Interactive]</i>  <br /><br />  <b>Choose your option bellow to colour an image:</b> <br />"  1 "1. Default" on  2  "2. Use a custom palette (.gpl file)" off);
+kChoices=$(kdialog --title="Colority - Interactive Tool to Colour" --radiolist "<i>Just a  simple GUI dialog script to use the Gmic filter <b>Colorize</b> [Interactive]</i>  <br /><br />  <b>Choose an option bellow to colour the image:</b> <br />"  1 "1. Default" on  2  "2. Use a custom palette (.gpl file)" off);
 
     case "$?" in
         0)
