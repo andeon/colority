@@ -12,7 +12,7 @@
 zSelected_file="$1" 
 zName=$(basename ${zSelected_file%.*})
 
-zChoices=$(zenity --width=400 --height=300 --window-icon=$zSelected_file --list  --title="Colority - Interactive Tool to Colour" --text="<i>Just a  simple GUI dialog script to use the Gmic filter <b>Colorize</b> [Interactive]</i> \n\n  Choose an option bellow to colour an image:\n " --column= "1. Default" "2. Use a custom palette (.gpl file)" );
+zChoices=$(zenity --width=400 --height=300 --window-icon=$zSelected_file --list  --title="Colority - Interactive Tool to Colour" --text="<i>Just a  simple GUI dialog script to use the Gmic filter <b>Colorize</b> [Interactive]</i> \n\n  Choose an option bellow to colour the image:\n " --column= "1. Default" "2. Use a custom palette (.gpl file)" );
 
 	case "$?" in 
 		0)
