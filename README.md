@@ -25,7 +25,9 @@ Run the Colority
 
 **Nautilus**: Right-Click on the image file select **Scripts > Colority - Interactive Tool to Colour**.
 
-![Alt text](http://i.imgur.com/9jbHCNM.gif "Screenshot of Colority")
+https://user-images.githubusercontent.com/11843239/129784532-a902c40b-2af9-4fd4-9c69-97515088e968.mp4
+
+
 
 
 
